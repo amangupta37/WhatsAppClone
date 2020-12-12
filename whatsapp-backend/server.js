@@ -36,9 +36,7 @@ app.get("/messages/sync",(req,res)=>{
     Messages.find((err,data)=>{
         if(err){
             res.status(500).send(err);
-            .catch(function(err) {
-        console.log('error: ', err);
-    });
+           
         }
         else{
             res.status(200).send(data);
@@ -51,9 +49,7 @@ app.post("/messages/new",(req,res)=>{
     Messages.create(dbMessage,(err,data)=>{
         if(err){
             res.status(500).send(err);
-            .catch(function(err) {
-        console.log('error: ', err);
-    });
+           
         }
         else{
             res.status(201).send(data);
